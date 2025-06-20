@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Me</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+        min-height: 100vh;
+      }
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+      .topnav a {
+        float: left;
+        color: rgb(239, 239, 239);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: background 0.3s, color 0.3s;
+      }
+      .topnav a:hover {
+        background-color: blueviolet;
+        color: deepskyblue;
+      }
+      .topnav a.active {
+        background-color: yellowgreen;
+        color: darkcyan;
+      }
+      .container {
+        max-width: 500px;
+        margin: 40px auto 0 auto;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        padding: 32px 24px 24px 24px;
+        text-align: center;
+      }
+      h1 {
+        color: #3a3a3a;
+        margin-bottom: 10px;
+      }
+      p {
+        color: #555;
+      }
+      form {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+      }
+      label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-weight: 500;
+        color: #333;
+      }
+      input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #b2bec3;
+        border-radius: 8px;
+        margin-top: 6px;
+        font-size: 16px;
+        resize: vertical;
+        background: #f7faff;
+        transition: border 0.2s;
+      }
+      input[type="email"]:focus, textarea:focus {
+        border: 1.5px solid #74b9ff;
+        outline: none;
+      }
+      button[type="submit"] {
+        background: linear-gradient(90deg, #74b9ff 0%, #81ecec 100%);
+        color: #222;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 0;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 8px;
+        transition: background 0.3s;
+      }
+      button[type="submit"]:hover {
+        background: linear-gradient(90deg, #00b894 0%, #00cec9 100%);
+        color: #fff;
+      }
+      .thankyou {
+        margin-top: 24px;
+        color: #0984e3;
+        font-size: 18px;
+        font-style: italic;
+      }
+      .emoji {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        animation: wave 1.5s infinite;
+        display: inline-block;
+      }
+      @keyframes wave {
+        0% { transform: rotate(0deg);}
+        10% { transform: rotate(14deg);}
+        20% { transform: rotate(-8deg);}
+        30% { transform: rotate(14deg);}
+        40% { transform: rotate(-4deg);}
+        50% { transform: rotate(10deg);}
+        60% { transform: rotate(0deg);}
+        100% { transform: rotate(0deg);}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="contactme.html">Contact Me</a>
+      <a href="pics.html">Gallery</a>
+    </div>
+    <div class="container">
+      <span class="emoji">📬</span>
+      <h1>Contact Me</h1>
+      <p>If you have any questions or comments, feel free to reach out!</p>
+      <form
+        action="https://formspree.io/f/xblyayoa"
+        method="POST"
+      >
+        <label>
+          Your email:
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Your message:
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+      <div class="thankyou">
+        Thank you for visiting my website!
+      </div>
+    </div>
+  </body>
+</html>

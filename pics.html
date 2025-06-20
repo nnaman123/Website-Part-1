@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gallery</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+        min-height: 100vh;
+      }
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+      .topnav a {
+        float: left;
+        color: rgb(239, 239, 239);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: background 0.3s, color 0.3s;
+      }
+      .topnav a:hover {
+        background-color: blueviolet;
+        color: deepskyblue;
+      }
+      .topnav a.active {
+        background-color: yellowgreen;
+        color: darkcyan;
+      }
+      .container {
+        max-width: 700px;
+        margin: 40px auto 0 auto;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        padding: 32px 24px 24px 24px;
+        text-align: center;
+      }
+      h1 {
+        color: #3a3a3a;
+        margin-bottom: 10px;
+      }
+      p {
+        color: #555;
+      }
+      .emoji {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        animation: wave 1.5s infinite;
+        display: inline-block;
+      }
+      @keyframes wave {
+        0% { transform: rotate(0deg);}
+        10% { transform: rotate(14deg);}
+        20% { transform: rotate(-8deg);}
+        30% { transform: rotate(14deg);}
+        40% { transform: rotate(-4deg);}
+        50% { transform: rotate(10deg);}
+        60% { transform: rotate(0deg);}
+        100% { transform: rotate(0deg);}
+      }
+      .slideshow-container {
+        position: relative;
+        margin: 30px auto 0 auto;
+        max-width: 500px;
+        height: 350px;
+        background: #e0eafc;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .mySlides {
+        width: 480px;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        border: 3px solid #cfdef3;
+      }
+      .thankyou {
+        margin-top: 24px;
+        color: #0984e3;
+        font-size: 18px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contactme.html">Contact Me</a>
+      <a class="active" href="pics.html">Gallery</a>
+    </div>
+    <div class="container">
+      <span class="emoji">🌳</span>
+      <h1>Nature Gallery</h1>
+      <p>Enjoy a slideshow of beautiful nature images!</p>
+      <div class="slideshow-container">
+        <img class="mySlides" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Forest Lake">
+        <img class="mySlides" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Mountain">
+        <img class="mySlides" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="River">
+        <img class="mySlides" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Sunset">
+        <img class="mySlides" src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80" alt="Green Hills">
+        <img class="mySlides" src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=800&q=80" alt="Waterfall">
+        <img class="mySlides" src="desert.jpeg" alt="Desert">
+        <img class="mySlides" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Flowers">
+        <img class="mySlides" src="https://images.unsplash.com/photo-1465156799763-2c087c332922?auto=format&fit=crop&w=800&q=80" alt="Lake">
+        <img class="mySlides" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Mountains 2">
+      </div>
+      <div class="thankyou">
+        Thank you for visiting my gallery!
+      </div>
+    </div>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>
